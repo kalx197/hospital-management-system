@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PAGE TITLE (Change for each page) -->
-    <title>MediCare General Hospital | Advanced Healthcare Services</title>
+    <title>aha General Hospital | Advanced Healthcare Services</title>
     
     <!-- PAGE DESCRIPTION -->
     <meta name="description" content="MediCare General Hospital provides comprehensive healthcare services with state-of-the-art technology and expert medical professionals. 24/7 emergency care available.">
@@ -124,82 +124,6 @@
     </footer>
 
     <!-- DIAGNOSTIC SCRIPT -->
-    <script>
-        // Check if CSS is loaded
-        window.onload = function() {
-            var statusElement = document.getElementById('css-status');
-            var testDiv = document.getElementById('css-test');
-            
-            // Test 1: Check if CSS files are in the DOM
-            var cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
-            var externalCssFound = false;
-            
-            cssLinks.forEach(function(link) {
-                if (link.href.includes('style.css') || link.href.includes('responsive.css')) {
-                    externalCssFound = true;
-                }
-            });
-            
-            // Test 2: Try to apply CSS via JavaScript to check
-            var styleTest = document.createElement('div');
-            styleTest.id = 'style-test-element';
-            styleTest.style.cssText = 'position: absolute; left: -9999px;';
-            document.body.appendChild(styleTest);
-            
-            // Add a test style
-            var testStyle = document.createElement('style');
-            testStyle.textContent = '#style-test-element { background-color: rgb(0, 100, 255) !important; }';
-            document.head.appendChild(testStyle);
-            
-            // Check if style was applied
-            setTimeout(function() {
-                var computedStyle = window.getComputedStyle(styleTest);
-                var canApplyStyles = computedStyle.backgroundColor === 'rgb(0, 100, 255)';
-                
-                // Show results
-                statusElement.innerHTML = '';
-                statusElement.innerHTML += '<p><strong>CSS Diagnostic Results:</strong></p>';
-                statusElement.innerHTML += '<p>✅ External CSS links in HTML: ' + (externalCssFound ? 'YES' : 'NO') + '</p>';
-                statusElement.innerHTML += '<p>✅ Browser can apply CSS: ' + (canApplyStyles ? 'YES' : 'NO') + '</p>';
-                statusElement.innerHTML += '<p>✅ Font Awesome loaded: ' + (typeof FontAwesome !== 'undefined' ? 'YES' : 'Check icons above') + '</p>';
-                statusElement.innerHTML += '<p>✅ Google Fonts loaded: Check if font is Montserrat or Open Sans</p>';
-                
-                // Change test banner color based on results
-                if (externalCssFound) {
-                    testDiv.style.background = 'green';
-                    testDiv.innerHTML = '✅ EXTERNAL CSS LINKS FOUND! Check if styles are applied below.';
-                } else {
-                    testDiv.style.background = 'red';
-                    testDiv.innerHTML = '❌ NO EXTERNAL CSS LINKS FOUND! Check file paths.';
-                }
-                
-                // Force reload CSS to test
-                console.log('To force CSS test, add this to your css/style.css:');
-                console.log('body { background-color: red !important; }');
-            }, 500);
-        };
-        
-        // Quick test: Try to load CSS dynamically
-        function testCssLoad() {
-            var testLink = document.createElement('link');
-            testLink.rel = 'stylesheet';
-            testLink.href = 'css/style.css';
-            
-            testLink.onload = function() {
-                console.log('✅ CSS loaded successfully via JavaScript!');
-                alert('CSS file exists at css/style.css!');
-            };
-            
-            testLink.onerror = function() {
-                console.error('❌ CSS file not found at css/style.css');
-                alert('ERROR: CSS file not found! Check: 1) css/ folder exists 2) style.css file exists');
-            };
-            
-            document.head.appendChild(testLink);
-        }
-        
-        // Run test after 2 seconds
-        setTimeout(testCssLoad, 2000);
-    </script>
+    
 </body>
 </html>
