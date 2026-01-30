@@ -1,29 +1,54 @@
 /* css/responsive.css - Mobile Responsive Styles */
 
-/* Tablet Styles (max-width: 1024px) */
+/* ====== TABLET STYLES (max-width: 1024px) ====== */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+    
     .hero .container {
         grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-content {
         text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .emergency-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }
 
-/* Mobile Styles (max-width: 768px) */
+/* ====== MOBILE STYLES (max-width: 768px) ====== */
 @media (max-width: 768px) {
+    /* Navigation */
     .nav-menu {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 0;
         left: 0;
         right: 0;
-        background-color: white;
+        bottom: 0;
+        background: white;
         flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        padding: 80px 30px 30px;
+        z-index: 999;
+        overflow-y: auto;
     }
     
     .nav-menu.show {
@@ -34,32 +59,132 @@
         display: block;
     }
     
-    .footer-content {
-        grid-template-columns: 1fr;
+    .nav-link {
+        padding: 15px;
+        font-size: 1.1rem;
+        justify-content: center;
+        border-bottom: 1px solid #eee;
     }
     
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
-
-/* Small Mobile (max-width: 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
+    .nav-link.active {
+        border-bottom: 2px solid #0056b3;
     }
     
-    .hero h1 {
-        font-size: 1.75rem;
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
     }
     
     .hero-buttons {
         flex-direction: column;
-        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Forms */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    /* Emergency Contact */
+    .emergency-contact {
+        flex-direction: column;
+    }
+    
+    /* Page Header */
+    .page-header {
+        padding: 60px 0;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ====== SMALL MOBILE (max-width: 480px) ====== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
     }
     
     .btn {
-        width: 100%;
-        justify-content: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .doctor-card,
+    .department-card {
+        padding: 20px;
+    }
+    
+    .stat-item {
+        padding: 20px 15px;
+    }
+    
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+}
+
+/* ====== LARGE DESKTOP (min-width: 1400px) ====== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* ====== PRINT STYLES ====== */
+@media print {
+    .emergency-banner,
+    .header,
+    .footer,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
     }
 }
