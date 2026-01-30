@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Services & Equipment | MediCare General Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fas fa-phone-alt"></i> Emergency: Call 102 or 112 | 24/7 Emergency Services Available</p>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hospital-alt"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">MediCare</span>
+                        <span class="logo-sub">General Hospital</span>
+                    </div>
+                </a>
+                
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="doctors.html" class="nav-link">Doctors & Schedule</a></li>
+                    <li><a href="services.html" class="nav-link active">Services & Machines</a></li>
+                    <li><a href="appointments.html" class="nav-link">Book Appointment</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact & Emergency</a></li>
+                </ul>
+                
+                <div class="header-actions">
+                    <a href="appointments.html" class="btn btn-primary btn-small">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Services Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Medical Services & Advanced Equipment</h1>
+                <p>State-of-the-art medical technology and comprehensive healthcare services</p>
+            </div>
+        </section>
+
+        <!-- Hospital Overview -->
+        <section class="hospital-overview">
+            <div class="container">
+                <div class="overview-content">
+                    <div class="overview-text">
+                        <h2>About MediCare General Hospital</h2>
+                        <p>Established in 1995, MediCare General Hospital has grown to become a leading healthcare institution with a commitment to providing exceptional medical care through advanced technology and compassionate service.</p>
+                        
+                        <div class="overview-stats">
+                            <div class="overview-stat">
+                                <h3>300+</h3>
+                                <p>Bed Capacity</p>
+                            </div>
+                            <div class="overview-stat">
+                                <h3>25+</h3>
+                                <p>Specialized Departments</p>
+                            </div>
+                            <div class="overview-stat">
+                                <h3>1500+</h3>
+                                <p>Medical Staff</p>
+                            </div>
+                            <div class="overview-stat">
+                                <h3>50,000+</h3>
+                                <p>Patients Treated Annually</p>
+                            </div>
+                        </div>
+                        
+                        <div class="overview-features">
+                            <h3>Hospital Features:</h3>
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>NABH Accredited</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-award"></i>
+                                    <span>ISO 9001:2015 Certified</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>24/7 Cardiac Emergency</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-ambulance"></i>
+                                    <span>Advanced Ambulance Fleet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview-image">
+                        <img src="https://images.unsplash.com/photo-1586773860418-dc22f8b874bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Modern hospital facility">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Services -->
+        <section class="medical-services">
+            <div class="container">
+                <h2>Our Medical Services</h2>
+                <p class="section-subtitle">Comprehensive healthcare across all major specialties</p>
+                
+                <div class="services-tabs">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="cardiology">Cardiology</button>
+                        <button class="tab-btn" data-tab="neurology">Neurology</button>
+                        <button class="tab-btn" data-tab="orthopedics">Orthopedics</button>
+                        <button class="tab-btn" data-tab="surgery">Surgery</button>
+                        <button class="tab-btn" data-tab="radiology">Radiology</button>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <!-- Cardiology Tab -->
+                        <div id="cardiology" class="tab-pane active">
+                            <h3>Cardiology & Cardiac Surgery</h3>
+                            <div class="service-details">
+                                <div class="service-description">
+                                    <p>Our cardiology department offers comprehensive heart care with cutting-edge diagnostic and interventional facilities. We perform complex cardiac procedures with high success rates.</p>
+                                    
+                                    <h4>Available Services:</h4>
+                                    <ul class="service-list">
+                                        <li>Coronary Angiography & Angioplasty</li>
+                                        <li>Pacemaker & ICD Implantation</li>
+                                        <li>Echocardiography (2D, 3D, Stress Echo)</li>
+                                        <li>Cardiac Electrophysiology Studies</li>
+                                        <li>Cardiac Rehabilitation Program</li>
+                                        <li>Preventive Cardiology Clinic</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="service-equipment">
+                                    <h4>Advanced Equipment:</h4>
+                                    <div class="equipment-grid">
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-heartbeat"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>256-Slice CT Scanner</h5>
+                                                <p>For coronary CT angiography</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-wave-square"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Cath Lab with FFR</h5>
+                                                <p>For interventional procedures</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-procedures"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Cardiac ICU</h5>
+                                                <p>12-bed dedicated cardiac ICU</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Neurology Tab -->
+                        <div id="neurology" class="tab-pane">
+                            <h3>Neurology & Neurosurgery</h3>
+                            <div class="service-details">
+                                <div class="service-description">
+                                    <p>Advanced neurological care with comprehensive diagnostic and therapeutic services for disorders of the brain, spine, and nervous system.</p>
+                                    
+                                    <h4>Available Services:</h4>
+                                    <ul class="service-list">
+                                        <li>Stroke Management (Thrombolysis)</li>
+                                        <li>Epilepsy Monitoring & Management</li>
+                                        <li>Movement Disorders Clinic</li>
+                                        <li>Neuro-rehabilitation Services</li>
+                                        <li>EEG, EMG, NCV Studies</li>
+                                        <li>Sleep Disorders Evaluation</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="service-equipment">
+                                    <h4>Advanced Equipment:</h4>
+                                    <div class="equipment-grid">
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>3 Tesla MRI</h5>
+                                                <p>For high-resolution neuroimaging</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-head-side-virus"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Video EEG Monitoring</h5>
+                                                <p>48-bed epilepsy monitoring unit</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-user-md"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Neuro-navigation System</h5>
+                                                <p>For precision neurosurgery</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Orthopedics Tab -->
+                        <div id="orthopedics" class="tab-pane">
+                            <h3>Orthopedics & Joint Replacement</h3>
+                            <div class="service-details">
+                                <div class="service-description">
+                                    <p>Comprehensive bone and joint care with advanced surgical techniques and rehabilitation facilities.</p>
+                                    
+                                    <h4>Available Services:</h4>
+                                    <ul class="service-list">
+                                        <li>Total Knee & Hip Replacement</li>
+                                        <li>Arthroscopic Surgery</li>
+                                        <li>Spinal Surgery & Decompression</li>
+                                        <li>Sports Injury Management</li>
+                                        <li>Pediatric Orthopedics</li>
+                                        <li>Bone Tumor Surgery</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="service-equipment">
+                                    <h4>Advanced Equipment:</h4>
+                                    <div class="equipment-grid">
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-bone"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>C-arm Image Intensifier</h5>
+                                                <p>For intraoperative imaging</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-wheelchair"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Computer Navigation System</h5>
+                                                <p>For precision joint replacement</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-dumbbell"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Advanced Physiotherapy Unit</h5>
+                                                <p>With robotic rehabilitation</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Surgery Tab -->
+                        <div id="surgery" class="tab-pane">
+                            <h3>General & Specialized Surgery</h3>
+                            <div class="service-details">
+                                <div class="service-description">
+                                    <p>Advanced surgical services across multiple specialties with modern operation theaters and post-operative care.</p>
+                                    
+                                    <h4>Available Services:</h4>
+                                    <ul class="service-list">
+                                        <li>Minimally Invasive (Laparoscopic) Surgery</li>
+                                        <li>Gastrointestinal Surgery</li>
+                                        <li>Urological Surgery</li>
+                                        <li>Plastic & Reconstructive Surgery</li>
+                                        <li>Oncological Surgery</li>
+                                        <li>Vascular Surgery</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="service-equipment">
+                                    <h4>Advanced Equipment:</h4>
+                                    <div class="equipment-grid">
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-syringe"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>HD Laparoscopic System</h5>
+                                                <p>For minimally invasive surgery</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-cut"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Harmonic Scalpel</h5>
+                                                <p>For bloodless surgery</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-procedures"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Modular Operation Theaters</h5>
+                                                <p>12 advanced OT complexes</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Radiology Tab -->
+                        <div id="radiology" class="tab-pane">
+                            <h3>Radiology & Imaging Services</h3>
+                            <div class="service-details">
+                                <div class="service-description">
+                                    <p>Comprehensive diagnostic imaging services with advanced technology and expert radiologists.</p>
+                                    
+                                    <h4>Available Services:</h4>
+                                    <ul class="service-list">
+                                        <li>Digital X-ray & Fluoroscopy</li>
+                                        <li>CT Scan (128 & 256 Slice)</li>
+                                        <li>MRI (1.5T & 3T)</li>
+                                        <li>Ultrasound (Color Doppler)</li>
+                                        <li>Mammography & DEXA Scan</li>
+                                        <li>Interventional Radiology</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="service-equipment">
+                                    <h4>Advanced Equipment:</h4>
+                                    <div class="equipment-grid">
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-x-ray"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>3 Tesla MRI Machine</h5>
+                                                <p>Siemens Magnetom Skyra</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-crosshairs"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>256-Slice CT Scanner</h5>
+                                                <p>GE Revolution CT</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                        <div class="equipment-item">
+                                            <div class="equipment-icon">
+                                                <i class="fas fa-user-md"></i>
+                                            </div>
+                                            <div class="equipment-info">
+                                                <h5>Digital Subtraction Angiography</h5>
+                                                <p>For neuro & vascular imaging</p>
+                                                <span class="equipment-status available">Available</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Services -->
+        <section class="emergency-services">
+            <div class="container">
+                <h2>Emergency & Critical Care</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+                        <h3>Advanced Ambulance Services</h3>
+                        <p>Fleet of 15 advanced life support ambulances equipped with:</p>
+                        <ul>
+                            <li>Portable ventilator</li>
+                            <li>Defibrillator with monitor</li>
+                            <li>Infusion pumps</li>
+                            <li>Oxygen supply system</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <h3>Trauma & Emergency Center</h3>
+                        <p>50-bed emergency department with:</p>
+                        <ul>
+                            <li>Dedicated trauma bays</li>
+                            <li>Resuscitation rooms</li>
+                            <li>Isolation facilities</li>
+                            <li>24/7 emergency OT</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Critical Care Units</h3>
+                        <p>Specialized intensive care facilities:</p>
+                        <ul>
+                            <li>Medical ICU (20 beds)</li>
+                            <li>Surgical ICU (15 beds)</li>
+                            <li>Cardiac ICU (12 beds)</li>
+                            <li>Neonatal ICU (10 beds)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Services -->
+        <section class="support-services">
+            <div class="container">
+                <h2>Support & Ancillary Services</h2>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <h3>Pharmacy Services</h3>
+                        <p>24/7 in-house pharmacy with wide range of medicines</p>
+                        <div class="support-hours">
+                            <p><strong>Timings:</strong> 24 Hours</p>
+                            <p><strong>Location:</strong> Ground Floor</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-card">
+                        <h3>Laboratory Services</h3>
+                        <p>NABL accredited lab with advanced testing facilities</p>
+                        <div class="support-hours">
+                            <p><strong>Timings:</strong> 6:00 - 22:00</p>
+                            <p><strong>Emergency:</strong> 24/7</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-card">
+                        <h3>Dietary Services</h3>
+                        <p>Therapeutic diet planning by certified nutritionists</p>
+                        <div class="support-hours">
+                            <p><strong>Timings:</strong> 7:00 - 21:00</p>
+                            <p><strong>Contact:</strong> Extension 555</p>
+                        </div>
+                    </div>
+                    
+                    <div class="support-card">
+                        <h3>Medical Records</h3>
+                        <p>Digital medical records with easy access system</p>
+                        <div class="support-hours">
+                            <p><strong>Timings:</strong> 8:00 - 20:00</p>
+                            <p><strong>Contact:</strong> Extension 600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-hospital-alt"></i>
+                        <div>
+                            <span class="logo-main">MediCare</span>
+                            <span class="logo-sub">General Hospital</span>
+                        </div>
+                    </a>
+                    <p>Providing quality healthcare services with compassion and advanced medical technology since 1995.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Medical Street, Health City</p>
+                        <p><i class="fas fa-phone"></i> General: (123) 456-7890</p>
+                        <p><i class="fas fa-ambulance"></i> Emergency: 102 / 112</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Doctors & Schedule</a></li>
+                        <li><a href="services.html">Services & Machines</a></li>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact & Emergency</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Departments</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#radiology">Radiology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hospital Hours</h4>
+                    <ul class="footer-hours">
+                        <li>Emergency: <span>24/7</span></li>
+                        <li>OPD: <span>8:00 - 20:00</span></li>
+                        <li>Pharmacy: <span>24/7</span></li>
+                        <li>Visiting Hours: <span>11:00 - 13:00 & 17:00 - 19:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MediCare General Hospital. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>
