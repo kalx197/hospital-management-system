@@ -37,10 +37,14 @@
     <meta property="og:description" content="Advanced healthcare with compassion and technology">
     <meta property="og:image" content="https://images.unsplash.com/photo-1586773860418-dc22f8b874bc">
     <meta property="og:url" content="https://medicarehospital.com">
-</head>
+</head>  <!-- You were missing this closing tag! -->
+
+<!-- YOU NEED TO ADD THE BODY SECTION -->
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Add this TEST DIV to check if CSS works -->
+    <div id="css-test" style="position: fixed; top: 0; left: 0; width: 100%; padding: 20px; background: black; color: white; text-align: center; z-index: 9999;">
+        CSS TEST: If this text is white on black, inline CSS works. If page has background colors, external CSS works.
+    </div>
     
     <!-- Emergency Banner -->
     <div class="emergency-banner">
@@ -84,181 +88,21 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Advanced Healthcare with Compassion</h1>
-                    <p>MediCare General Hospital offers comprehensive medical services with cutting-edge technology and experienced healthcare professionals.</p>
-                    <div class="hero-buttons">
-                        <a href="appointments.html" class="btn btn-primary">Book Appointment</a>
-                        <a href="#services" class="btn btn-secondary">Our Services</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1586773860418-dc22f8b874bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Modern hospital reception area with staff">
-                </div>
+        <!-- Add some simple test content -->
+        <div class="container" style="padding: 100px 20px; text-align: center;">
+            <h1>MediCare General Hospital</h1>
+            <p>Welcome to our hospital website. If you see styled elements below, CSS is working!</p>
+            
+            <div style="margin: 40px;">
+                <button class="btn btn-primary">Test Primary Button</button>
+                <button class="btn btn-secondary">Test Secondary Button</button>
             </div>
-        </section>
-
-        <!-- Quick Stats -->
-        <section class="quick-stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>50+</h3>
-                        <p>Expert Doctors</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>24/7</h3>
-                        <p>Emergency Services</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100+</h3>
-                        <p>Advanced Machines</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>25+</h3>
-                        <p>Medical Departments</p>
-                    </div>
-                </div>
+            
+            <div style="background: #f5f5f5; padding: 30px; border-radius: 10px; margin-top: 30px;">
+                <h2>CSS Status Check</h2>
+                <p id="css-status">Checking CSS connection...</p>
             </div>
-        </section>
-
-        <!-- Featured Departments -->
-        <section id="services" class="departments">
-            <div class="container">
-                <h2>Our Medical Departments</h2>
-                <p class="section-subtitle">Comprehensive care across all major medical specialties</p>
-                
-                <div class="departments-grid">
-                    <article class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-heartbeat"></i>
-                        </div>
-                        <h3>Cardiology</h3>
-                        <p>Advanced heart care with state-of-the-art diagnostic and treatment facilities.</p>
-                        <a href="services.html#cardiology" class="department-link">View Services <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                    
-                    <article class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Neurology</h3>
-                        <p>Comprehensive neurological care including EEG, EMG, and advanced imaging.</p>
-                        <a href="services.html#neurology" class="department-link">View Services <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                    
-                    <article class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-baby"></i>
-                        </div>
-                        <h3>Pediatrics</h3>
-                        <p>Specialized care for children with child-friendly facilities and expert pediatricians.</p>
-                        <a href="services.html#pediatrics" class="department-link">View Services <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                    
-                    <article class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-bone"></i>
-                        </div>
-                        <h3>Orthopedics</h3>
-                        <p>Bone and joint care with advanced surgical and rehabilitation facilities.</p>
-                        <a href="services.html#orthopedics" class="department-link">View Services <i class="fas fa-arrow-right"></i></a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Today's Available Doctors -->
-        <section class="available-doctors">
-            <div class="container">
-                <h2>Doctors Available Today</h2>
-                <p class="section-subtitle">Consult with our expert doctors. All times are in 24-hour format.</p>
-                
-                <div class="doctors-slider">
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Sarah Johnson">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Sarah Johnson</h3>
-                            <p class="doctor-specialty">Cardiologist</p>
-                            <p class="doctor-qualification">MD, DM Cardiology</p>
-                            <div class="doctor-availability">
-                                <p><strong>Available:</strong> 09:00 - 17:00</p>
-                                <p><strong>Room:</strong> Cardiology Wing - 201</p>
-                            </div>
-                            <a href="appointments.html?doctor=johnson" class="btn btn-primary btn-small">Book Appointment</a>
-                        </div>
-                    </div>
-                    
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Michael Chen">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Michael Chen</h3>
-                            <p class="doctor-specialty">Neurologist</p>
-                            <p class="doctor-qualification">MD, DM Neurology</p>
-                            <div class="doctor-availability">
-                                <p><strong>Available:</strong> 10:00 - 18:00</p>
-                                <p><strong>Room:</strong> Neurology Wing - 305</p>
-                            </div>
-                            <a href="appointments.html?doctor=chen" class="btn btn-primary btn-small">Book Appointment</a>
-                        </div>
-                    </div>
-                    
-                    <div class="doctor-card">
-                        <div class="doctor-image">
-                            <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Dr. Priya Sharma">
-                        </div>
-                        <div class="doctor-info">
-                            <h3>Dr. Priya Sharma</h3>
-                            <p class="doctor-specialty">Pediatrician</p>
-                            <p class="doctor-qualification">MD, DCH</p>
-                            <div class="doctor-availability">
-                                <p><strong>Available:</strong> 08:30 - 16:30</p>
-                                <p><strong>Room:</strong> Pediatrics Wing - 102</p>
-                            </div>
-                            <a href="appointments.html?doctor=sharma" class="btn btn-primary btn-small">Book Appointment</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <a href="doctors.html" class="btn btn-secondary">View All Doctors & Schedule</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Emergency Info -->
-        <section class="emergency-info">
-            <div class="container">
-                <div class="emergency-content">
-                    <div class="emergency-text">
-                        <h2>Emergency Services</h2>
-                        <p>Our emergency department is staffed 24/7 with trauma specialists and equipped with life-saving technology.</p>
-                        <ul class="emergency-list">
-                            <li><i class="fas fa-check-circle"></i> 24/7 Emergency & Trauma Care</li>
-                            <li><i class="fas fa-check-circle"></i> Ambulance with Advanced Life Support</li>
-                            <li><i class="fas fa-check-circle"></i> Immediate CT Scan & X-ray Facilities</li>
-                            <li><i class="fas fa-check-circle"></i> Dedicated Emergency Operation Theaters</li>
-                        </ul>
-                        <div class="emergency-contact">
-                            <a href="tel:102" class="btn btn-emergency">
-                                <i class="fas fa-phone-alt"></i> Emergency: 102 / 112
-                            </a>
-                            <a href="contact.html" class="btn btn-secondary">Contact Hospital</a>
-                        </div>
-                    </div>
-                    <div class="emergency-image">
-                        <img src="https://images.unsplash.com/photo-1586773860418-dc22f8b874bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Emergency department with medical staff">
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -274,52 +118,88 @@
                         </div>
                     </a>
                     <p>Providing quality healthcare services with compassion and advanced medical technology since 1995.</p>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Medical Street, Health City</p>
-                        <p><i class="fas fa-phone"></i> General: (123) 456-7890</p>
-                        <p><i class="fas fa-ambulance"></i> Emergency: 102 / 112</p>
-                    </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="doctors.html">Doctors & Schedule</a></li>
-                        <li><a href="services.html">Services & Machines</a></li>
-                        <li><a href="appointments.html">Book Appointment</a></li>
-                        <li><a href="contact.html">Contact & Emergency</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Departments</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html#cardiology">Cardiology</a></li>
-                        <li><a href="services.html#neurology">Neurology</a></li>
-                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
-                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
-                        <li><a href="services.html#radiology">Radiology</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Hospital Hours</h4>
-                    <ul class="footer-hours">
-                        <li>Emergency: <span>24/7</span></li>
-                        <li>OPD: <span>8:00 - 20:00</span></li>
-                        <li>Pharmacy: <span>24/7</span></li>
-                        <li>Visiting Hours: <span>11:00 - 13:00 & 17:00 - 19:00</span></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2023 MediCare General Hospital. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- DIAGNOSTIC SCRIPT -->
+    <script>
+        // Check if CSS is loaded
+        window.onload = function() {
+            var statusElement = document.getElementById('css-status');
+            var testDiv = document.getElementById('css-test');
+            
+            // Test 1: Check if CSS files are in the DOM
+            var cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+            var externalCssFound = false;
+            
+            cssLinks.forEach(function(link) {
+                if (link.href.includes('style.css') || link.href.includes('responsive.css')) {
+                    externalCssFound = true;
+                }
+            });
+            
+            // Test 2: Try to apply CSS via JavaScript to check
+            var styleTest = document.createElement('div');
+            styleTest.id = 'style-test-element';
+            styleTest.style.cssText = 'position: absolute; left: -9999px;';
+            document.body.appendChild(styleTest);
+            
+            // Add a test style
+            var testStyle = document.createElement('style');
+            testStyle.textContent = '#style-test-element { background-color: rgb(0, 100, 255) !important; }';
+            document.head.appendChild(testStyle);
+            
+            // Check if style was applied
+            setTimeout(function() {
+                var computedStyle = window.getComputedStyle(styleTest);
+                var canApplyStyles = computedStyle.backgroundColor === 'rgb(0, 100, 255)';
+                
+                // Show results
+                statusElement.innerHTML = '';
+                statusElement.innerHTML += '<p><strong>CSS Diagnostic Results:</strong></p>';
+                statusElement.innerHTML += '<p>✅ External CSS links in HTML: ' + (externalCssFound ? 'YES' : 'NO') + '</p>';
+                statusElement.innerHTML += '<p>✅ Browser can apply CSS: ' + (canApplyStyles ? 'YES' : 'NO') + '</p>';
+                statusElement.innerHTML += '<p>✅ Font Awesome loaded: ' + (typeof FontAwesome !== 'undefined' ? 'YES' : 'Check icons above') + '</p>';
+                statusElement.innerHTML += '<p>✅ Google Fonts loaded: Check if font is Montserrat or Open Sans</p>';
+                
+                // Change test banner color based on results
+                if (externalCssFound) {
+                    testDiv.style.background = 'green';
+                    testDiv.innerHTML = '✅ EXTERNAL CSS LINKS FOUND! Check if styles are applied below.';
+                } else {
+                    testDiv.style.background = 'red';
+                    testDiv.innerHTML = '❌ NO EXTERNAL CSS LINKS FOUND! Check file paths.';
+                }
+                
+                // Force reload CSS to test
+                console.log('To force CSS test, add this to your css/style.css:');
+                console.log('body { background-color: red !important; }');
+            }, 500);
+        };
+        
+        // Quick test: Try to load CSS dynamically
+        function testCssLoad() {
+            var testLink = document.createElement('link');
+            testLink.rel = 'stylesheet';
+            testLink.href = 'css/style.css';
+            
+            testLink.onload = function() {
+                console.log('✅ CSS loaded successfully via JavaScript!');
+                alert('CSS file exists at css/style.css!');
+            };
+            
+            testLink.onerror = function() {
+                console.error('❌ CSS file not found at css/style.css');
+                alert('ERROR: CSS file not found! Check: 1) css/ folder exists 2) style.css file exists');
+            };
+            
+            document.head.appendChild(testLink);
+        }
+        
+        // Run test after 2 seconds
+        setTimeout(testCssLoad, 2000);
+    </script>
 </body>
 </html>
