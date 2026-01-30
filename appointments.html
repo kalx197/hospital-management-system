@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | MediCare General Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fas fa-phone-alt"></i> Emergency: Call 102 or 112 | 24/7 Emergency Services Available</p>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hospital-alt"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">MediCare</span>
+                        <span class="logo-sub">General Hospital</span>
+                    </div>
+                </a>
+                
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="doctors.html" class="nav-link">Doctors & Schedule</a></li>
+                    <li><a href="services.html" class="nav-link">Services & Machines</a></li>
+                    <li><a href="appointments.html" class="nav-link active">Book Appointment</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact & Emergency</a></li>
+                </ul>
+                
+                <div class="header-actions">
+                    <a href="appointments.html" class="btn btn-primary btn-small">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Appointment Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Book an Appointment</h1>
+                <p>Schedule your consultation with our expert doctors</p>
+            </div>
+        </section>
+
+        <!-- Appointment Process -->
+        <section class="appointment-process">
+            <div class="container">
+                <h2>Simple 3-Step Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Choose Doctor & Time</h3>
+                        <p>Select from available doctors and convenient time slots</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Fill Patient Details</h3>
+                        <p>Provide patient information and medical history</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Confirm Booking</h3>
+                        <p>Review and confirm your appointment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Form -->
+        <section class="appointment-form-section">
+            <div class="container">
+                <div class="appointment-container">
+                    <!-- Doctor Selection -->
+                    <div class="form-section">
+                        <h3>Step 1: Select Doctor & Time</h3>
+                        <div class="doctor-selection">
+                            <div class="form-group">
+                                <label for="appointment-department">Department *</label>
+                                <select id="appointment-department" name="department" required>
+                                    <option value="" disabled selected>Select Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="surgery">General Surgery</option>
+                                    <option value="radiology">Radiology</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointment-doctor">Doctor *</label>
+                                <select id="appointment-doctor" name="doctor" required disabled>
+                                    <option value="" disabled selected>Select Department First</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointment-date">Preferred Date *</label>
+                                <input type="date" id="appointment-date" name="date" required min="2023-10-31">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointment-time">Preferred Time Slot *</label>
+                                <select id="appointment-time" name="time" required disabled>
+                                    <option value="" disabled selected>Select Doctor First</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Patient Information -->
+                    <div class="form-section">
+                        <h3>Step 2: Patient Information</h3>
+                        <div class="patient-info-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-first-name">First Name *</label>
+                                    <input type="text" id="patient-first-name" name="first-name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patient-last-name">Last Name *</label>
+                                    <input type="text" id="patient-last-name" name="last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-age">Age *</label>
+                                    <input type="number" id="patient-age" name="age" min="0" max="120" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patient-gender">Gender *</label>
+                                    <select id="patient-gender" name="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="prefer-not-to-say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="patient-phone">Phone Number *</label>
+                                    <input type="tel" id="patient-phone" name="phone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patient-email">Email Address</label>
+                                    <input type="email" id="patient-email" name="email">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="patient-symptoms">Symptoms / Reason for Visit *</label>
+                                <textarea id="patient-symptoms" name="symptoms" rows="3" required placeholder="Please describe your symptoms or reason for appointment"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="patient-history">Medical History (if any)</label>
+                                <textarea id="patient-history" name="history" rows="2" placeholder="Any existing medical conditions, allergies, or current medications"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Insurance & Payment -->
+                    <div class="form-section">
+                        <h3>Step 3: Payment & Confirmation</h3>
+                        <div class="payment-section">
+                            <div class="form-group">
+                                <label for="insurance-provider">Insurance Provider (if applicable)</label>
+                                <select id="insurance-provider" name="insurance">
+                                    <option value="" selected>No Insurance</option>
+                                    <option value="united">United Healthcare</option>
+                                    <option value="aetna">Aetna</option>
+                                    <option value="cigna">Cigna</option>
+                                    <option value="blue-cross">Blue Cross Blue Shield</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group" id="insurance-policy-group" style="display: none;">
+                                <label for="insurance-policy">Insurance Policy Number</label>
+                                <input type="text" id="insurance-policy" name="policy">
+                            </div>
+                            
+                            <div class="appointment-fee">
+                                <h4>Consultation Fee: <span id="consultation-fee">$150</span></h4>
+                                <p class="fee-note">*Fee may vary based on specialist. Payable at the hospital.</p>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms-agreement" name="terms" required>
+                                <label for="terms-agreement">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> *</label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="sms-notifications" name="sms" checked>
+                                <label for="sms-notifications">Send SMS reminders for my appointment</label>
+                            </div>
+                            
+                            <button type="submit" id="submit-appointment" class="btn btn-primary btn-large">
+                                <i class="fas fa-calendar-check"></i> Confirm Appointment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Appointment Summary -->
+                <div class="appointment-summary">
+                    <h3>Appointment Summary</h3>
+                    <div class="summary-content">
+                        <div class="summary-item">
+                            <span class="summary-label">Doctor:</span>
+                            <span id="summary-doctor" class="summary-value">Not Selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Date & Time:</span>
+                            <span id="summary-datetime" class="summary-value">Not Selected</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Patient:</span>
+                            <span id="summary-patient" class="summary-value">Not Provided</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Status:</span>
+                            <span id="summary-status" class="summary-value pending">Pending Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment FAQ -->
+        <section class="appointment-faq">
+            <div class="container">
+                <h2>Appointment FAQ</h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>How do I cancel or reschedule my appointment?</summary>
+                        <p>You can cancel or reschedule your appointment by calling our appointment desk at (123) 456-7890 at least 24 hours before your scheduled time.</p>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>What should I bring to my appointment?</summary>
+                        <p>Please bring your ID, insurance card (if applicable), list of current medications, and any previous medical records related to your condition.</p>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>How early should I arrive for my appointment?</summary>
+                        <p>Please arrive 15 minutes before your scheduled appointment time to complete any necessary paperwork.</p>
+                    </details>
+                    
+                    <details class="faq-item">
+                        <summary>What if I need urgent care but can't get an appointment?</summary>
+                        <p>For urgent medical needs, please visit our Emergency Department which is open 24/7, or call our emergency hotline at 102 or 112.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-hospital-alt"></i>
+                        <div>
+                            <span class="logo-main">MediCare</span>
+                            <span class="logo-sub">General Hospital</span>
+                        </div>
+                    </a>
+                    <p>Providing quality healthcare services with compassion and advanced medical technology since 1995.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Medical Street, Health City</p>
+                        <p><i class="fas fa-phone"></i> General: (123) 456-7890</p>
+                        <p><i class="fas fa-ambulance"></i> Emergency: 102 / 112</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doctors.html">Doctors & Schedule</a></li>
+                        <li><a href="services.html">Services & Machines</a></li>
+                        <li><a href="appointments.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact & Emergency</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Departments</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#radiology">Radiology</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hospital Hours</h4>
+                    <ul class="footer-hours">
+                        <li>Emergency: <span>24/7</span></li>
+                        <li>OPD: <span>8:00 - 20:00</span></li>
+                        <li>Pharmacy: <span>24/7</span></li>
+                        <li>Visiting Hours: <span>11:00 - 13:00 & 17:00 - 19:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 MediCare General Hospital. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Appointment Confirmed!</h3>
+                <button class="close-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-details">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>Your appointment has been scheduled successfully</h4>
+                    <div class="appointment-details">
+                        <p><strong>Appointment ID:</strong> <span id="modal-appointment-id">MED-2023-001</span></p>
+                        <p><strong>Doctor:</strong> <span id="modal-doctor-name">Dr. Sarah Johnson</span></p>
+                        <p><strong>Date & Time:</strong> <span id="modal-appointment-time">Nov 1, 2023 at 10:00 AM</span></p>
+                        <p><strong>Patient:</strong> <span id="modal-patient-name">John Doe</span></p>
+                    </div>
+                    <div class="confirmation-notes">
+                        <p>Please arrive 15 minutes before your appointment time. Bring your ID and insurance card (if applicable).</p>
+                        <p>A confirmation email and SMS has been sent to your registered contact.</p>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="print-appointment">
+                            <i class="fas fa-print"></i> Print Details
+                        </button>
+                        <button class="btn btn-secondary close-modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/appointments.js"></script>
+</body>
+</html>
