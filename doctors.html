@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors & Schedule | MediCare General Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div class="container">
+            <p><i class="fas fa-phone-alt"></i> Emergency: Call 102 or 112 | 24/7 Emergency Services Available</p>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hospital-alt"></i>
+                    <div class="logo-text">
+                        <span class="logo-main">MediCare</span>
+                        <span class="logo-sub">General Hospital</span>
+                    </div>
+                </a>
+                
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="doctors.html" class="nav-link active">Doctors & Schedule</a></li>
+                    <li><a href="services.html" class="nav-link">Services & Machines</a></li>
+                    <li><a href="appointments.html" class="nav-link">Book Appointment</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact & Emergency</a></li>
+                </ul>
+                
+                <div class="header-actions">
+                    <a href="appointments.html" class="btn btn-primary btn-small">
+                        <i class="fas fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Doctors Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Medical Team</h1>
+                <p>Meet our team of experienced doctors and specialists. All times are displayed in 24-hour format.</p>
+                
+                <!-- Department Filter -->
+                <div class="filter-container">
+                    <label for="department-filter">Filter by Department:</label>
+                    <select id="department-filter">
+                        <option value="all">All Departments</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                        <option value="pediatrics">Pediatrics</option>
+                        <option value="surgery">General Surgery</option>
+                        <option value="radiology">Radiology</option>
+                        <option value="emergency">Emergency Medicine</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Schedule Table -->
+        <section class="doctors-schedule">
+            <div class="container">
+                <h2>Weekly Doctor Schedule</h2>
+                <p class="section-subtitle">Consultation timings from Monday to Saturday (Sunday: Emergency only)</p>
+                
+                <div class="schedule-controls">
+                    <button id="prev-week" class="btn btn-secondary btn-small">
+                        <i class="fas fa-chevron-left"></i> Previous Week
+                    </button>
+                    <h3 id="current-week">Current Week: Oct 23 - Oct 28, 2023</h3>
+                    <button id="next-week" class="btn btn-secondary btn-small">
+                        Next Week <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Schedule Table -->
+                <div class="table-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Doctor</th>
+                                <th>Department</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                            <!-- Doctor rows will be dynamically inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Legend -->
+                <div class="schedule-legend">
+                    <h4>Schedule Legend:</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-color available"></span>
+                            <span>Available</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color limited"></span>
+                            <span>Limited Slots</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color emergency"></span>
+                            <span>Emergency Only</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color unavailable"></span>
+                            <span>Not Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Grid -->
+        <section class="doctors-grid-section">
+            <div class="container">
+                <h2>Meet Our Specialists</h2>
+                <p class="section-subtitle">Our team of board-certified doctors with extensive experience in their respective fields.</p>
+                
+                <div class="doctors-grid">
+                    <!-- Cardiology Doctors -->
+                    <article class="doctor-profile" data-department="cardiology">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Sarah Johnson">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. Sarah Johnson</h3>
+                            <p class="doctor-title">Senior Cardiologist</p>
+                            <p class="doctor-qualifications">MD, DM Cardiology, FACC</p>
+                            <p class="doctor-experience">15+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">Heart Failure</span>
+                                <span class="specialty-tag">Interventional Cardiology</span>
+                                <span class="specialty-tag">Preventive Cardiology</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Regular OPD:</strong> Mon-Fri, 09:00-17:00</p>
+                                <p><strong>Emergency Duty:</strong> Wednesday, 17:00-08:00</p>
+                                <p><strong>Room:</strong> Cardiology Wing - 201</p>
+                            </div>
+                            <a href="appointments.html?doctor=johnson" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Neurology Doctors -->
+                    <article class="doctor-profile" data-department="neurology">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Michael Chen">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. Michael Chen</h3>
+                            <p class="doctor-title">Head of Neurology</p>
+                            <p class="doctor-qualifications">MD, DM Neurology, FAAN</p>
+                            <p class="doctor-experience">18+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">Stroke Neurology</span>
+                                <span class="specialty-tag">Epilepsy</span>
+                                <span class="specialty-tag">Movement Disorders</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Regular OPD:</strong> Tue-Sat, 10:00-18:00</p>
+                                <p><strong>Emergency Duty:</strong> Friday, 18:00-08:00</p>
+                                <p><strong>Room:</strong> Neurology Wing - 305</p>
+                            </div>
+                            <a href="appointments.html?doctor=chen" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Pediatrics Doctors -->
+                    <article class="doctor-profile" data-department="pediatrics">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Dr. Priya Sharma">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. Priya Sharma</h3>
+                            <p class="doctor-title">Senior Pediatrician</p>
+                            <p class="doctor-qualifications">MD, DCH, FIAP</p>
+                            <p class="doctor-experience">12+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">Neonatology</span>
+                                <span class="specialty-tag">Pediatric Allergy</span>
+                                <span class="specialty-tag">Growth & Development</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Regular OPD:</strong> Mon-Fri, 08:30-16:30</p>
+                                <p><strong>Emergency Duty:</strong> Saturday, 16:30-08:30</p>
+                                <p><strong>Room:</strong> Pediatrics Wing - 102</p>
+                            </div>
+                            <a href="appointments.html?doctor=sharma" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Orthopedics Doctors -->
+                    <article class="doctor-profile" data-department="orthopedics">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Dr. Robert Wilson">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. Robert Wilson</h3>
+                            <p class="doctor-title">Orthopedic Surgeon</p>
+                            <p class="doctor-qualifications">MS Ortho, FROS</p>
+                            <p class="doctor-experience">20+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">Joint Replacement</span>
+                                <span class="specialty-tag">Sports Injuries</span>
+                                <span class="specialty-tag">Spinal Surgery</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Regular OPD:</strong> Mon, Wed, Fri, 08:00-16:00</p>
+                                <p><strong>Surgery Days:</strong> Tuesday & Thursday</p>
+                                <p><strong>Room:</strong> Orthopedics Wing - 405</p>
+                            </div>
+                            <a href="appointments.html?doctor=wilson" class="btn btn-primary">Book Appointment</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Emergency Medicine Doctors -->
+                    <article class="doctor-profile" data-department="emergency">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80" alt="Dr. Amanda Lee">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. Amanda Lee</h3>
+                            <p class="doctor-title">Emergency Medicine Specialist</p>
+                            <p class="doctor-qualifications">MD, MEM, FACEP</p>
+                            <p class="doctor-experience">10+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">Trauma Care</span>
+                                <span class="specialty-tag">Toxicology</span>
+                                <span class="specialty-tag">Disaster Medicine</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Shift Schedule:</strong> Rotating 12-hour shifts</p>
+                                <p><strong>Available:</strong> 24/7 Emergency Coverage</p>
+                                <p><strong>Location:</strong> Emergency Department</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary">Emergency Contact</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Radiology Doctors -->
+                    <article class="doctor-profile" data-department="radiology">
+                        <div class="doctor-profile-image">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="Dr. James Miller">
+                        </div>
+                        <div class="doctor-profile-info">
+                            <h3>Dr. James Miller</h3>
+                            <p class="doctor-title">Radiologist</p>
+                            <p class="doctor-qualifications">MD, DMRD, FICR</p>
+                            <p class="doctor-experience">14+ years experience</p>
+                            <div class="doctor-specialties">
+                                <span class="specialty-tag">MRI Interpretation</span>
+                                <span class="specialty-tag">Interventional Radiology</span>
+                                <span class="specialty-tag">CT Scan Specialist</span>
+                            </div>
+                            <div class="doctor-availability">
+                                <p><strong>Regular Hours:</strong> Mon-Sat, 08:00-20:00</p>
+                                <p><strong>Emergency Reports:</strong> 24/7 Available</p>
+                                <p><strong>Location:</strong> Radiology Department</p>
+                            </div>
+                            <a href="services.html#radiology" class="btn btn-primary">View Equipment</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Find Doctor Form -->
+        <section class="find-doctor">
+            <div class="container">
+                <div class="find-doctor-content">
+                    <div class="find-doctor-text">
+                        <h2>Can't Find Your Doctor?</h2>
+                        <p>Use our search tool to find doctors by specialty, availability, or name.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-search"></i> Search by specialty or doctor name</li>
+                            <li><i class="fas fa-calendar-alt"></i> Check real-time availability</li>
+                            <li><i class="fas fa-clock"></i> View upcoming appointment slots</li>
+                            <li><i class="fas fa-user-md"></i> Read doctor profiles and qualifications</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="find-doctor-form">
+                        <h3>Find a Doctor</h3>
+                        <form id="doctor-search-form">
+                            <div class="form-group">
+                                <label for="search-specialty">Specialty/Department</label>
+                                <select id="search-specialty">
+                                    <option value="">Any Specialty</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="surgery">General Surgery</option>
+                                    <option value="radiology">Radiology</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="search-day">Day of Week</label>
+                                <select id="search-day">
+                                    <option value="">Any Day</option>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="search-time">Preferred Time</label>
+                                <select id="search-time">
+                                    <option value="">Any Time</option>
+                                    <option value="morning">Morning (08:00-12:00)</option>
+                                    <option value="afternoon">Afternoon (12:00-16:00)</option>
+                                    <option value="evening">Evening (16:00-20:00)</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Search Doctors</button>
+                        </form>
+                        
+                        <div id="search-results" class="search-results">
+                            <!-- Search results will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-hospital-alt"></i>
+                        <div>
+                            <span class="logo-main">MediCare</span>
+                            <span class="logo-sub">General Hospital</span>
+                        </div>
+                    </a>
+                    <p>Providing quality healthcare services with
